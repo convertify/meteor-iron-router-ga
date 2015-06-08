@@ -7,6 +7,7 @@ Package.describe({
 
 Package.onUse(function(api) {
     api.versionsFrom('METEOR@1.0.1');
+    api.use('mongo', 'server');
     api.use([ 'templating', 'iron:router@1.0.0' ], 'client');
 
     api.addFiles([
@@ -16,6 +17,7 @@ Package.onUse(function(api) {
     ], 'client');
 
     api.addFiles([
-        'lib/browser_policy.js'
+        'lib/browser_policy.js',
+        'lib/server.js'
     ], 'server');
 });
